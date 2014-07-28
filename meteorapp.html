@@ -1,22 +1,17 @@
 <head>
-<<<<<<< HEAD
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="meteorapp.css">
-
-<!-- Latest compiled and minified JavaScript -->
-=======
-  <title>meteorapp</title>
-  
-  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <style type="text/css">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+   <link rel="stylesheet" href="meteorapp.css">
+   <!-- Latest compiled and minified JavaScript -->
+   <title>meteorapp</title>
+   <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   <style type="text/css">
       html { height: 100% }
       body { height: 100%; margin: 0; padding: 0 }
       #map-canvas { height: 100% }
-    </style>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARzaK0BJ6q9OoGN5hpzvd9g4AK_9gh6IU">
-    </script>
-    <script type="text/javascript">
+   </style>
+   <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARzaK0BJ6q9OoGN5hpzvd9g4AK_9gh6IU"></script>
+   <script type="text/javascript">
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(53.379, -1.4628967),
@@ -26,58 +21,58 @@
             mapOptions);
       }
       google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+   </script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-  {{>main}}
+   {{>main}}
 </body>
-
 <template name="main">
-  <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid header-color">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <h1 class="navbar-brand" href="#">Indiego</h1>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">About</a></li>
-            <li class="divider"></li>
-            <li><a href="#" id="modal-trigger">Modal</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  <div class="modal fade" id="modal-id">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title">Modal title</h4>
+   <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid header-color">
+         <!-- Brand and toggle get grouped for better mobile display -->
+         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <h1 class="navbar-brand" href="#">Indiego</h1>
+         </div>
+         <!-- Collect the nav links, forms, and other content for toggling -->
+         <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
+               <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">About</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" id="modal-trigger">Modal</a></li>
+               </ul>
+            </li>
+         </ul>
       </div>
-      <div class="modal-body">
-        <p>One fine body&hellip;</p>
+      <!-- /.navbar-collapse -->
+      <!-- /.container-fluid -->
+      <div class="modal fade" id="modal-id">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" ><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                  <h4 class="modal-title">Modal title</h4>
+               </div>
+               <div class="modal-body">
+                  <p>One fine body&hellip;</p>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+            <!-- /.modal-content -->
+         </div>
+         <!-- /.modal-dialog -->
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /.modal -->
-</nav>
-</div>
+      <!-- /.modal -->
+   </nav>
 </template>
-
