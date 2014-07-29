@@ -36,3 +36,9 @@
 .header-color {
 	background-color: #4B0081;
 }
+.navbar {
+	margin-bottom: 0px;
+}
+.navbar-default .navbar-nav a.dropdown-toggle {
+	color: #ffffff;
+}
