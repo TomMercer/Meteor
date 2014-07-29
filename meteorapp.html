@@ -67,29 +67,35 @@
           <h4 class="modal-title">Modal title</h4>
         </div>
         <div class="modal-body">
-          <p>One fine body&hellip;</p>
-            <button type="button" class="btn btn-default btn-md">
-  <span class="glyphicon glyphicon-send"></span>
-</button>
-<div class="dropdown">
+          <form class="" role="Search">
+            <div class="form-group location-modal top">
+              <input type="text" class="form-control location-modal top" placeholder="Type your location here">
+              <button type="button" class="btn btn-default btn-md pull-right">
+                <span class="glyphicon glyphicon-send pull-right"></span>
+              </button>
+            </div>
+          </form>
+          <form class="location-modal" role="search">
+  <div class="form-group">
+    <input type="text" class="form-control" placeholder="Search">
+  </div>
+</form>
+          <div class="dropdown pull-right dropdown-settings">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-    Trouble picking locations? Try a suggested one.
+    Dropdown
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+    <li role="presentation" class="divider"></li>
     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
   </ul>
-</div>
+</div></div>
+              </div>
+            </div>
         </div>
-        <div class="modal-footer">
+        <div class="clear">
         </div>
-      </div>
-      <!-- /.modal-content -->
-    </div>
-    <!-- /.modal-dialog -->
-  </div>
-  <!-- /.modal -->
 </template>

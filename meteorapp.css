@@ -8,3 +8,25 @@
 	display: inline;
 	float: right;
 }
+
+.location-modal {
+	display: inline;
+	width: 80%
+}
+.dropdown-settings {
+	position: relative;
+	top: -50px;
+}
+.form-group {
+	width: 80%;
+}
+.top {
+	margin-bottom: 10px;
+}
+.modal-body {
+    max-height: 800px;
+    height: 150px;
+}
+.modal.fade {
+	margin-top: 15%
+}
