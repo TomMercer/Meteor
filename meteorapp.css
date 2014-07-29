@@ -41,4 +41,12 @@
 }
 .navbar-default .navbar-nav a.dropdown-toggle {
 	color: #ffffff;
+	background-color: #4B0081;
+}
+.navbar-default .navbar-nav a:hover.dropdown-toggle {
+	color: #CFD0D2;
+}
+.navbar-default .navbar-nav .open a.dropdown-toggle {
+	color: #ffffff;
+	background-color: #4B0081;
 }

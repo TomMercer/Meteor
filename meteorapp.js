@@ -11,7 +11,7 @@ if (Meteor.isClient) {
   	conn = new Mongo();
 	db = conn.getDB("myDatabase");
 }
-2
+
 
 if (Meteor.isServer) {
   Meteor.startup(function() {
