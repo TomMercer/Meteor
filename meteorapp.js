@@ -1,6 +1,4 @@
 if (Meteor.isClient) {
-<<<<<<< HEAD
-
     Template.main.events = {
         'click #modal-trigger': function(event) {
             event.preventDefault();
@@ -8,19 +6,31 @@ if (Meteor.isClient) {
             console.log("Test")
         }
     }
-=======
-  Template.main.events({
-'click #modal-trigger' : function (event){
-  event.preventDefault();
-  $('#modal-id').modal();
-  console.log("Test");
-}
-});
->>>>>>> 9858faa5db66bf7a3f5a379485476ecbc6bb1c9b
 }
 
-if (Meteor.isServer) {
-    Meteor.startup(function() {
-        console.log("go suck a nut.")
-    });
-}
+    if (Meteor.isServer) {
+        Meteor.startup(function() {
+            console.log("go suck a nut.")
+        });
+    }
+
+    function set_current_location() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                add_location('My location',
+                    position.coords.latitude,
+                    position.coords.longitude);
+
+                set_markers(new google.maps.LatLngBounds(), map);
+            }, function error(err) {
+                console.log('error: ' + err.message);
+                set_markers(new google.maps.LatLngBounds(), map);
+            });
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+    
+    function find_google_places(){
+    
+    }
