@@ -28,5 +28,11 @@
     height: 150px;
 }
 .modal.fade {
-	margin-top: 15%
+	margin-top: 15%;
+}
+.img {
+	height: 20%;
+}
+.header-color {
+	background-color: #4B0081;
 }
