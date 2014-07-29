@@ -1,17 +1,13 @@
 
 
 if (Meteor.isClient) {
-  Template.hello.greeting = function () {
-    return "Welcome to meteorapp.";
-  };
-
-  Template.main.events = {
+  Template.main.events({
 'click #modal-trigger' : function (event){
   event.preventDefault();
   $('#modal-id').modal();
-  console.log("Test")
+  console.log("Test");
 }
-}
+});
 }
 
 if (Meteor.isServer) {

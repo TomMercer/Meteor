@@ -1,3 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Averia+Sans+Libre);
+
 .navbar-default .navbar-brand {
 	color: #3964C3;
+	font-family: 'Averia Sans Libre';
+}
+.navbar .nav {
+	display: inline;
+	float: right;
 }
