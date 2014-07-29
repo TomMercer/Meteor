@@ -8,8 +8,10 @@ if (Meteor.isClient) {
   Template.main.rendered = function() {
     $('#modal-id').modal();
   }
+  	conn = new Mongo();
+	db = conn.getDB("myDatabase");
 }
-
+2
 
 if (Meteor.isServer) {
   Meteor.startup(function() {
@@ -35,6 +37,12 @@ if (Meteor.isServer) {
         }
     }
     
-    function find_google_places(){
+    function find_google_places(lat, lng ,dist){
     
+    	var url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius="+dist+"&key=AIzaSyARzaK0BJ6q9OoGN5hpzvd9g4AK_9gh6IU"
+    	jQuery.ajax( url) //settings tag will need fixing
+    	db.createCollection(gplaces)
+    	
     }
+    
+    
