@@ -4,6 +4,7 @@
 	color: #3964C3;
 	font-family: 'Averia Sans Libre';
 	float: left;
+	height: 80px;
 }
 .navbar .nav {
 	display: inline;
@@ -32,7 +33,7 @@
 	margin-top: 15%;
 }
 .img {
-	height: 30%;
+	float: left;
 }
 .header-color {
 	background-color: #4B0081;
@@ -56,10 +57,10 @@
 }
 #opener {
 	float: left;
-	margin: -10px 0px 0px -60px;
+	margin: -10px 0px 0px -96px;
 	border-radius: 0;
-	padding: 14px 17px;
+	padding: 29px 36px;
 }
 #map-canvas {
-	margin-top: 50px;
+	margin-top: 80px;
 }
