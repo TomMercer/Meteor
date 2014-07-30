@@ -3,6 +3,7 @@
 .navbar-default .navbar-brand {
 	color: #3964C3;
 	font-family: 'Averia Sans Libre';
+	float: left;
 }
 .navbar .nav {
 	display: inline;
@@ -39,20 +40,26 @@
 .navbar {
 	margin-bottom: 0px;
 }
-.navbar-default .navbar-nav a.dropdown-toggle {
-	color: #ffffff;
-	background-color: #4B0081;
-}
-.navbar-default .navbar-nav a:hover.dropdown-toggle {
-	color: #CFD0D2;
-}
-.navbar-default .navbar-nav a.open.dropdown-toggle {
-	color: #ffffff;
-	background-color: #4B0081;
-}
-.navbar-fixed-top {
-	width: 100%;
-}
 .navbar-default {
 	background-color: #4B0081;
+}
+#slide-panel {
+    width:300px;
+    height:300px;
+    padding:10px;
+    float: right;
+    background:#eee;
+    margin-right:-300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#opener {
+	float: left;
+	margin: -10px 0px 0px -60px;
+	border-radius: 0;
+	padding: 14px 17px;
+}
+#map-canvas {
+	margin-top: 50px;
 }

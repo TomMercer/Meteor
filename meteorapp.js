@@ -1,15 +1,40 @@
+
 if (Meteor.isClient) {
   Template.main.events({
-    'click #modal-trigger': function(event) {
-      event.preventDefault();
-      $('#modal-id').modal();
+    'click.btn-function' : function(event){
+
+    },
+    'click.drop-1' : function(event){
+      
+    },
+    'click.drop-2' : function(event){
+      
+    },
+    'click.drop-3' : function(event){
+      
+    },
+    'keypress' : function(event){
+      
+        if (event.currentTarget.className.indexOf("search" > -1)) {
+          if (event.keyCode === 13) {
+            console.log("Test")
+          };
+        };
     }
   });
   Template.main.rendered = function() {
-    $('#modal-id').modal();
+      $('#opener').on('mouseenter', function() {   
+    var panel = $('#slide-panel');
+    if (panel.hasClass("visible")) {
+      panel.removeClass('visible').animate({'margin-right':'-300px'});
+    } else {
+      panel.addClass('visible').animate({'margin-right':'0px'});
+    } 
+    return false; 
+  });
   }
-  conn = new Mongo();
-  db = conn.getDB("myDatabase");
+  //conn = new Mongo();
+  //db = conn.getDB("myDatabase");
 }
 
 
@@ -18,6 +43,7 @@ if (Meteor.isServer) {
     // code to run on server at startup
   });
 }
+
 
 
 function set_current_location() {
