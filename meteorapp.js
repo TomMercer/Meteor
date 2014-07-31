@@ -5,8 +5,7 @@ if (Meteor.isClient) {
       alert("clicked");
       set_current_location();
       function set_current_location() {
-      alert("set_current_location");
-        
+
   if (navigator.geolocation) {
           alert("HERE!");
     navigator.geolocation.getCurrentPosition(function(position) {
