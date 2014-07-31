@@ -2,18 +2,17 @@
 if (Meteor.isClient) {
   Template.main.events({
     'click.btn-function' : function(event){
-      alert("clicked");
       set_current_location();
       function set_current_location() {
 
   if (navigator.geolocation) {
-          alert("HERE!");
     navigator.geolocation.getCurrentPosition(function(position) {
-      add_location('My location',
-        position.coords.latitude,
-        position.coords.longitude);
-        alert("Test");
-      set_markers(new google.maps.LatLngBounds(), map);
+      var myLatlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+      var marker = new google.maps.Marker({
+          position: myLatlng,
+          title:"Hello World!"
+      });
+      marker.setMap(map);
     }, function error(err) {
       alert('error: ' + err.message);
       set_markers(new google.maps.LatLngBounds(), map);
@@ -22,7 +21,6 @@ if (Meteor.isClient) {
     alert("Geolocation is not supported by this browser.");
   }
 }
-alert("Finished!");
     },
     'click.drop-1' : function(event){
       
