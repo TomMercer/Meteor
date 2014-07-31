@@ -2,7 +2,28 @@
 if (Meteor.isClient) {
   Template.main.events({
     'click.btn-function' : function(event){
-
+      alert("clicked");
+      set_current_location();
+      function set_current_location() {
+      alert("set_current_location");
+        
+  if (navigator.geolocation) {
+          alert("HERE!");
+    navigator.geolocation.getCurrentPosition(function(position) {
+      add_location('My location',
+        position.coords.latitude,
+        position.coords.longitude);
+        alert("Test");
+      set_markers(new google.maps.LatLngBounds(), map);
+    }, function error(err) {
+      alert('error: ' + err.message);
+      set_markers(new google.maps.LatLngBounds(), map);
+    });
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+}
+alert("Finished!");
     },
     'click.drop-1' : function(event){
       
@@ -17,6 +38,7 @@ if (Meteor.isClient) {
       
         if (event.currentTarget.className.indexOf("search" > -1)) {
           if (event.keyCode === 13) {
+
             console.log("Test")
           };
         };
@@ -44,24 +66,6 @@ if (Meteor.isServer) {
   });
 }
 
-
-
-function set_current_location() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(function(position) {
-      add_location('My location',
-        position.coords.latitude,
-        position.coords.longitude);
-
-      set_markers(new google.maps.LatLngBounds(), map);
-    }, function error(err) {
-      console.log('error: ' + err.message);
-      set_markers(new google.maps.LatLngBounds(), map);
-    });
-  } else {
-    alert("Geolocation is not supported by this browser.");
-  }
-}
 
 function find_google_places(lat, lng, dist) {
 
